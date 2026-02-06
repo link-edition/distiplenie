@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Distiplenie - Vazifalaringizni tartibga soling, hayotingizni boshqaring. Millionlab odamlar ishongan intizom tizimi.">
+    <title>Distiplenie | Tartibli bo'ling, Muvaffaqiyatli bo'ling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">📋</span>
+                <span class="logo-text">Distiplenie</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#features" class="nav-link">Xususiyatlar</a></li>
+                <li><a href="#platforms" class="nav-link">Yuklab olish</a></li>
+                <li><a href="#testimonials" class="nav-link">Fikrlar</a></li>
+                <li><a href="#pricing" class="nav-link">Premium</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#" class="nav-link nav-signin">Kirish</a>
+                <a href="dashboard.html" class="btn btn-primary nav-signup">Boshlash</a>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Tartibli bo'ling,</span>
+                    <span class="title-line gradient-text">Muvaffaqiyatli bo'ling.</span>
+                </h1>
+                <p class="hero-description">
+                    Vazifalaringizni boshqaring, maqsadlaringizga erishing va har kuni
+                    eng yaxshi versiyangizga aylaning. Millionlab foydalanuvchilar ishongan tizim.
+                </p>
+                <div class="hero-buttons">
+                    <a href="dashboard.html" class="btn btn-primary btn-lg">
+                        <span>Bepul Boshlash</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="#features" class="btn btn-outline btn-lg">
+                        <span>Ko'proq bilish</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10M+</span>
+                        <span class="stat-label">Foydalanuvchi</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.8</span>
+                        <span class="stat-label">⭐ Reyting</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">50M+</span>
+                        <span class="stat-label">Vazifa bajarildi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="mockup-title">Distiplenie</span>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="mockup-sidebar">
+                            <div class="sidebar-item active">
+                                <span class="sidebar-icon">📥</span>
+                                <span>Inbox</span>
+                            </div>
+                            <div class="sidebar-item">
+                                <span class="sidebar-icon">📅</span>
+                                <span>Bugun</span>
+                            </div>
+                            <div class="sidebar-item">
+                                <span class="sidebar-icon">📆</span>
+                                <span>Kelasi hafta</span>
+                            </div>
+                            <div class="sidebar-item">
+                                <span class="sidebar-icon">✅</span>
+                                <span>Bajarilgan</span>
+                            </div>
+                        </div>
+                        <div class="mockup-main">
+                            <div class="task-demo">
+                                <div class="task-checkbox checked"></div>
+                                <span class="task-text done">Ertalabki mashq</span>
+                                <span class="task-time">07:00</span>
+                            </div>
+                            <div class="task-demo">
+                                <div class="task-checkbox checked"></div>
+                                <span class="task-text done">Kitob o'qish</span>
+                                <span class="task-time">08:30</span>
+                            </div>
+                            <div class="task-demo active">
+                                <div class="task-checkbox"></div>
+                                <span class="task-text">Loyiha ustida ishlash</span>
+                                <span class="task-time">10:00</span>
+                            </div>
+                            <div class="task-demo">
+                                <div class="task-checkbox"></div>
+                                <span class="task-text">Ingliz tili darsi</span>
+                                <span class="task-time">14:00</span>
+                            </div>
+                            <div class="task-demo">
+                                <div class="task-checkbox"></div>
+                                <span class="task-text">Sport zali</span>
+                                <span class="task-time">18:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-card card-1">
+                    <span class="card-icon">🎯</span>
+                    <span class="card-text">80% bajarildi</span>
+                </div>
+                <div class="floating-card card-2">
+                    <span class="card-icon">🔥</span>
+                    <span class="card-text">7 kunlik streak!</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <div class="bg-shape shape-1"></div>
+            <div class="bg-shape shape-2"></div>
+            <div class="bg-shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="trusted-section">
+        <div class="container">
+            <p class="trusted-text">Dunyo bo'ylab eng yaxshi kompaniyalar tomonidan tavsiya etilgan</p>
+            <div class="trusted-logos">
+                <div class="logo-item">Forbes</div>
+                <div class="logo-item">TechCrunch</div>
+                <div class="logo-item">ProductHunt</div>
+                <div class="logo-item">AppStore</div>
+                <div class="logo-item">Google Play</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Xususiyatlar</span>
+                <h2 class="section-title">Hayotingizni boshqarish uchun <br><span class="gradient-text">kuchli
+                        vositalar</span></h2>
+                <p class="section-description">
+                    Oddiy vazifa ro'yxatidan tortib murakkab loyihalarni boshqarishgacha -
+                    barchasi bir joyda.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 11l3 3L22 4" />
+                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Vazifalarni boshqarish</h3>
+                    <p class="feature-description">
+                        Vazifalaringizni yarating, tahrirlang va kuzatib boring.
+                        Subtasklar, belgilar va ustuvorliklar bilan ishlang.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Kalendar ko'rinishi</h3>
+                    <p class="feature-description">
+                        Kunlik, haftalik va oylik ko'rinishlarda vazifalaringizni
+                        rejalashtiring va vaqtingizni samarali boshqaring.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                            <path d="M13.73 21a2 2 0 01-3.46 0" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Aqlli eslatmalar</h3>
+                    <p class="feature-description">
+                        Vaqtga asoslangan eslatmalar, joylashuv bo'yicha bildirishnomalar
+                        va takroriy vazifalar.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Pomodoro Taymer</h3>
+                    <p class="feature-description">
+                        Diqqatingizni jamlang va samarali ishlang.
+                        25/5 texnikasi bilan vaqtingizni boshqaring.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                            <path d="M16 3.13a4 4 0 010 7.75" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Jamoaviy hamkorlik</h3>
+                    <p class="feature-description">
+                        Loyihalarni jamoangiz bilan baham ko'ring, vazifalarni
+                        taqsimlang va birgalikda muvaffaqiyatga erishing.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10" />
+                            <line x1="12" y1="20" x2="12" y2="4" />
+                            <line x1="6" y1="20" x2="6" y2="14" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Statistika va Tahlil</h3>
+                    <p class="feature-description">
+                        Samaradorligingizni kuzating, o'sishingizni tahlil qiling
+                        va har kuni yaxshilaning.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms-section" id="platforms">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Sinxronizatsiya</span>
+                <h2 class="section-title">Barcha qurilmalarda <br><span class="gradient-text">mukammal ishlaydi</span>
+                </h2>
+                <p class="section-description">
+                    Telefon, kompyuter yoki planshetda - vazifalaringiz doimo siz bilan.
+                </p>
+            </div>
+
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 2a10 10 0 0110 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h3>iOS</h3>
+                    <p>iPhone va iPad uchun</p>
+                    <a href="#" class="platform-link">App Store'da yuklab oling →</a>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M5 16V8a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2H7a2 2 0 01-2-2z" />
+                            <path d="M3 12h18" />
+                        </svg>
+                    </div>
+                    <h3>Android</h3>
+                    <p>Barcha Android qurilmalar</p>
+                    <a href="#" class="platform-link">Google Play'da yuklab oling →</a>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3>Windows</h3>
+                    <p>PC va laptop uchun</p>
+                    <a href="#" class="platform-link">Microsoft Store'da yuklab oling →</a>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M2 12h20" />
+                            <path d="M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10 15 15 0 014-10z" />
+                        </svg>
+                    </div>
+                    <h3>Web</h3>
+                    <p>Istalgan brauzerda</p>
+                    <a href="#" class="platform-link">Hoziroq ishlating →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Fikrlar</span>
+                <h2 class="section-title">Foydalanuvchilar nima <br><span class="gradient-text">deyishadi?</span></h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "Bu ilova hayotimni o'zgartirdi! Endi barcha vazifalarimni
+                            tartibda tutaman va hech narsani unutmayman."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div class="author-info">
+                            <span class="author-name">Aziz Karimov</span>
+                            <span class="author-role">Dasturchi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card featured">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "Eng yaxshi vazifa boshqaruv ilovasi! Jamoam bilan
+                            hamkorlik qilish juda oson bo'ldi. Mahsulotimiz
+                            sifati sezilarli darajada oshdi."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <span class="author-name">Sardor Mahmudov</span>
+                            <span class="author-role">Startup asoschisi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "Talaba sifatida bu ilova menga juda yordam berdi.
+                            Darslarim va loyihalarimni osongina boshqaraman."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">NJ</div>
+                        <div class="author-info">
+                            <span class="author-name">Nilufar Jabborova</span>
+                            <span class="author-role">Talaba</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Narxlar</span>
+                <h2 class="section-title">Sizga mos rejani <br><span class="gradient-text">tanlang</span></h2>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Bepul</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/oylik</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Cheksiz vazifalar</li>
+                        <li><span class="check">✓</span> 2 ta ro'yxat</li>
+                        <li><span class="check">✓</span> Asosiy eslatmalar</li>
+                        <li><span class="check">✓</span> Web va mobil</li>
+                    </ul>
+                    <a href="#cta" class="btn btn-outline btn-block">Boshlash</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Mashhur</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Premium</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$2.99</span>
+                            <span class="price-period">/oylik</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Bepul rejadagi hammasi</li>
+                        <li><span class="check">✓</span> Cheksiz ro'yxatlar</li>
+                        <li><span class="check">✓</span> Kalendar integratsiyasi</li>
+                        <li><span class="check">✓</span> Kengaytirilgan statistika</li>
+                        <li><span class="check">✓</span> Jamoaviy hamkorlik</li>
+                        <li><span class="check">✓</span> Ustuvor qo'llab-quvvatlash</li>
+                    </ul>
+                    <a href="#cta" class="btn btn-primary btn-block">Premium olish</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Jamoa</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$5.99</span>
+                            <span class="price-period">/foydalanuvchi/oy</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Premium rejadagi hammasi</li>
+                        <li><span class="check">✓</span> Jamoani boshqarish</li>
+                        <li><span class="check">✓</span> Admin paneli</li>
+                        <li><span class="check">✓</span> API kiritish</li>
+                        <li><span class="check">✓</span> SSO</li>
+                    </ul>
+                    <a href="#cta" class="btn btn-outline btn-block">Bog'lanish</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Samaradorligingizni oshirishga <br><span class="gradient-text">tayyormisiz?</span>
+                </h2>
+                <p class="cta-description">
+                    Bugun boshlang va minglab muvaffaqiyatli foydalanuvchilarga qo'shiling.
+                </p>
+                <form class="cta-form" id="ctaForm">
+                    <input type="email" placeholder="Email manzilingiz" class="cta-input" required>
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        Bepul Boshlash
+                    </button>
+                </form>
+                <p class="cta-note">Kredit karta talab qilinmaydi. 14 kunlik bepul sinov.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <span class="logo-icon">📋</span>
+                        <span class="logo-text">Distiplenie</span>
+                    </a>
+                    <p class="footer-description">
+                        Vazifalaringizni boshqaring, hayotingizni o'zgartiring.
+                        Millionlab odamlar ishongan intizom tizimi.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Telegram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M21.198 2.433a2.242 2.242 0 00-1.022.215l-16.5 7.5A2.25 2.25 0 003.75 14.25l4.5 1.5 1.5 4.5a2.25 2.25 0 004.102-.074l7.5-16.5a2.25 2.25 0 00-.154-1.243z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Mahsulot</h4>
+                    <ul>
+                        <li><a href="#features">Xususiyatlar</a></li>
+                        <li><a href="#pricing">Narxlar</a></li>
+                        <li><a href="#platforms">Yuklab olish</a></li>
+                        <li><a href="#">Yangiliklar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Resurslar</h4>
+                    <ul>
+                        <li><a href="#">Yordam markazi</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Qo'llanmalar</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Kompaniya</h4>
+                    <ul>
+                        <li><a href="#">Biz haqimizda</a></li>
+                        <li><a href="#">Karera</a></li>
+                        <li><a href="#">Bog'lanish</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Distiplenie. Barcha huquqlar himoyalangan.</p>
+                <div class="footer-legal">
+                    <a href="#">Maxfiylik siyosati</a>
+                    <a href="#">Foydalanish shartlari</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
