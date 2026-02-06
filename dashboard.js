@@ -276,21 +276,13 @@ function initEventListeners() {
         }
     });
 
-    $('#taskSubmitBtn')?.addEventListener('click', () => {
-        const input = $('#taskInput');
-        if (input.value.trim()) {
-            addTask(input.value.trim());
-            input.value = '';
-        }
-    });
+
 
     // Task input buttons
-    $('#taskDateBtn')?.addEventListener('click', openDatePicker);
     $('#taskPriorityBtn')?.addEventListener('click', () => $('#priorityModal').classList.add('open'));
-    $('#taskRepeatBtn')?.addEventListener('click', () => $('#repeatModal').classList.add('open'));
-    $('#taskTagBtn')?.addEventListener('click', () => $('#tagModal').classList.add('open'));
-    $('#taskEmojiBtn')?.addEventListener('click', () => $('#emojiModal').classList.add('open'));
-    $('#taskListBtn')?.addEventListener('click', openListPicker);
+
+    // Date, Repeat, Tag, Emoji and List picker buttons removed per user request
+
 
     // Modal backdrops
     $$('.modal-backdrop').forEach(backdrop => {
@@ -1591,7 +1583,7 @@ function setQuickDate(type) {
 
 function updateDateDisplay() {
     const btn = $('#selectedDate');
-    btn.textContent = state.selectedDate ? formatDueDate(state.selectedDate) : 'Sana';
+    if (btn) btn.textContent = state.selectedDate ? formatDueDate(state.selectedDate) : 'Sana';
 }
 
 function updatePriorityDisplay() {
@@ -1613,8 +1605,10 @@ function openListPicker() {
         opt.addEventListener('click', () => {
             state.selectedListId = opt.dataset.id;
             const list = state.lists.find(l => l.id === opt.dataset.id);
-            $('#selectedList').textContent = list?.name || 'Inbox';
-            $('#selectedListColor').style.background = list?.color || '#4A90E2';
+            const label = $('#selectedList');
+            const color = $('#selectedListColor');
+            if (label) label.textContent = list?.name || 'Inbox';
+            if (color) color.style.background = list?.color || '#4A90E2';
             closeAllModals();
         });
     });
