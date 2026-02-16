@@ -179,19 +179,36 @@ function updateTodayDate() {
 // ============================================
 
 function initEventListeners() {
-    // Sidebar toggle
-    $('#sidebarToggle')?.addEventListener('click', () => {
-        $('#sidebar').classList.toggle('collapsed');
-    });
+
 
     // Mobile menu
     $('#mobileMenuBtn')?.addEventListener('click', () => {
         $('#sidebar').classList.toggle('open');
+        $('#sidebarOverlay').classList.toggle('active');
+    });
+
+    // Close sidebar when clicking overlay
+    $('#sidebarOverlay')?.addEventListener('click', () => {
+        $('#sidebar').classList.remove('open');
+        $('#sidebarOverlay').classList.remove('active');
     });
 
     // Quick add
     $('#quickAddBtn')?.addEventListener('click', () => {
         $('#taskInput').focus();
+    });
+
+    // Keyboard Shortcuts (Ctrl + K)
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            $('#taskInput')?.focus();
+        }
+        if (e.key === 'Escape') {
+            closeAllModals();
+            $('#sidebar').classList.remove('open');
+            $('#sidebarOverlay').classList.remove('active');
+        }
     });
 
     // Navigation
@@ -399,6 +416,7 @@ function switchView(view) {
     }
 
     $('#sidebar').classList.remove('open');
+    $('#sidebarOverlay').classList.remove('active');
 }
 
 // ============================================

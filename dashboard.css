@@ -54,20 +54,21 @@
     --primary: #818cf8;
     --primary-light: #a5b4fc;
 
-    --bg-primary: #0f0f14;
-    --bg-secondary: #18181f;
-    --bg-tertiary: #1e1e28;
-    --sidebar-bg: #0f0f14;
+    --bg-primary: #0a0a0f;
+    /* Deep midnight */
+    --bg-secondary: #12121a;
+    --bg-tertiary: #1a1a24;
+    --sidebar-bg: #0a0a0f;
 
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
     --text-muted: #64748b;
 
-    --border-color: rgba(255, 255, 255, 0.08);
-    --glass-bg: rgba(24, 24, 31, 0.9);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --border-color: rgba(255, 255, 255, 0.05);
+    --glass-bg: rgba(10, 10, 15, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .linear-bg {
@@ -207,12 +208,14 @@ body {
 .sidebar {
     width: var(--sidebar-width);
     height: calc(100vh - 24px);
-    background: var(--sidebar-bg);
-    border: 1px solid var(--border-color);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
     border-radius: var(--border-radius-xl);
     display: flex;
     flex-direction: column;
-    box-shadow: var(--card-shadow);
+    box-shadow: var(--glass-shadow);
     z-index: 100;
     transition: var(--smooth);
 }
@@ -387,13 +390,15 @@ body {
 .main-content {
     flex: 1;
     height: calc(100vh - 24px);
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
     border-radius: var(--border-radius-xl);
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    box-shadow: var(--card-shadow);
+    box-shadow: var(--glass-shadow);
     transition: var(--smooth);
 }
 
@@ -783,12 +788,28 @@ body {
 .views-container {
     flex: 1;
     overflow: hidden;
+    position: relative;
 }
 
 .view-panel {
     display: none;
     height: 100%;
     overflow-y: auto;
+    animation: viewFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes viewFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
 }
 
 .view-panel.active {
@@ -1543,57 +1564,80 @@ body {
     color: var(--text-primary);
 }
 
-/* Bento Grid Statistics */
+/* Bento Grid Statistics - Premium Layout */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto;
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
     padding: 32px;
 }
 
 .stats-card {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-lg);
     padding: 24px;
-    transition: var(--smooth);
-    display: flex;
-    flex-direction: column;
+    transition: var(--spring);
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    /* The border thickness */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent, rgba(255, 255, 255, 0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
 .stats-card:hover {
-    border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.02);
+    transform: translateY(-5px);
+    box-shadow: var(--glass-shadow);
+    border-color: var(--primary);
 }
 
 .stats-pulse {
-    grid-column: span 3;
-    background: var(--bg-tertiary);
-    color: var(--text-primary);
-    border: 1px solid var(--border-color);
-}
-
-.stats-pulse .stats-card-header h3 {
-    color: white;
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 .stats-overview {
     grid-column: span 1;
+    grid-row: span 2;
 }
 
 .stats-completion {
     grid-column: span 1;
+    grid-row: span 1;
 }
 
 .stats-heatmap {
     grid-column: span 3;
+    grid-row: span 1;
+}
+
+.stats-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
 .stats-card-header h3 {
     font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-weight: 700;
+    margin-bottom: 0;
 }
 
 .chart-container {
@@ -2521,6 +2565,24 @@ body {
 
     .mobile-menu-btn {
         display: block;
+    }
+
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .sidebar-overlay.active {
+        display: block;
+        opacity: 1;
     }
 
     .search-box {
