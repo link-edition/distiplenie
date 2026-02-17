@@ -56,12 +56,8 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow: hidden;
 }
 
 a {
@@ -78,7 +74,6 @@ a {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    overflow: hidden;
 }
 
 /* Left Panel - Branding */
@@ -236,6 +231,7 @@ a {
     padding: 60px;
     background: var(--bg-primary);
     position: relative;
+    overflow-y: auto;
 }
 
 .auth-form-container {
@@ -663,35 +659,96 @@ a {
         display: none;
     }
 
+    .auth-page {
+        flex-direction: column;
+    }
+
     .auth-form-panel {
         padding: 40px 24px;
+        justify-content: flex-start;
+        min-height: 100vh;
     }
 
     .auth-header-mobile-logo {
         display: flex;
     }
+
+    .back-home {
+        position: static;
+        margin-bottom: 12px;
+        align-self: flex-start;
+    }
+
+    .auth-form-container {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
 }
 
 @media (max-width: 480px) {
     .auth-form-panel {
-        padding: 24px 16px;
+        padding: 20px 16px;
     }
 
     .auth-title {
-        font-size: 24px;
+        font-size: 22px;
+    }
+
+    .auth-subtitle {
+        font-size: 14px;
     }
 
     .form-row {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 16px;
     }
 
     .social-login {
         flex-direction: column;
     }
 
-    .back-home {
-        position: static;
+    .social-btn {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .form-input {
+        padding: 12px 14px;
+        padding-left: 40px;
+        font-size: 14px;
+    }
+
+    .auth-submit {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+
+    .auth-form {
+        gap: 16px;
+    }
+
+    .auth-header {
+        margin-bottom: 20px;
+    }
+
+    .auth-divider {
         margin-bottom: 16px;
+    }
+
+    .social-login {
+        margin-bottom: 16px;
+    }
+
+    .form-label {
+        font-size: 13px;
+    }
+
+    .auth-terms {
+        font-size: 12px;
+    }
+
+    .auth-message {
+        font-size: 13px;
+        padding: 10px 12px;
     }
 }
