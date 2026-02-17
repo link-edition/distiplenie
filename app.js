@@ -1,5 +1,5 @@
 // ============================================
-// DISTIPLENIE - Landing Page JavaScript
+// DISCIPLINE - Landing Page JavaScript
 // Modern Interactions & Animations
 // ============================================
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFormHandling();
     initAnimations();
 
-    console.log('🚀 Distiplenie initialized!');
+    console.log('🚀 Discipline initialized!');
 });
 
 // ============================================
@@ -339,3 +339,4 @@ const statsObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.hero-stats').forEach(el => {
     statsObserver.observe(el);
 });
+

@@ -1,15 +1,15 @@
 // ============================================
-// DISTIPLENIE DASHBOARD - Full Featured App
+// DISCIPLINE DASHBOARD - Full Featured App
 // ============================================
 
 const STORAGE = {
-    TASKS: 'distiplenie_tasks',
-    LISTS: 'distiplenie_lists',
-    SETTINGS: 'distiplenie_settings',
-    GOALS: 'distiplenie_goals',
-    HABITS: 'distiplenie_habits',
-    STATS: 'distiplenie_stats',
-    STREAK: 'distiplenie_streak'
+    TASKS: 'discipline_tasks',
+    LISTS: 'discipline_lists',
+    SETTINGS: 'discipline_settings',
+    GOALS: 'discipline_goals',
+    HABITS: 'discipline_habits',
+    STATS: 'discipline_stats',
+    STREAK: 'discipline_streak'
 };
 
 const DEFAULT_LISTS = [
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateTodayDate();
     checkStreak();
     requestNotificationPermission();
-    console.log('🚀 Distiplenie Dashboard initialized!');
+    console.log('🚀 Discipline Dashboard initialized!');
 });
 
 function loadData() {
@@ -2136,3 +2136,4 @@ function updateHabitsCount() {
     const activeHabits = getTodayHabits().filter(h => !h.completedDates.includes(today)).length;
     $('#habitsCount').textContent = activeHabits;
 }
+

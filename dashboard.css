@@ -1,4 +1,4 @@
-/* DISTIPLENIE DASHBOARD - Premium UI Overhaul */
+/* DISCIPLINE DASHBOARD - Premium UI Overhaul */
 
 :root {
     /* 🌞 LIGHT MODE - Vibrant & Energetic */
@@ -3218,3 +3218,4 @@ button:focus-visible {
     text-decoration: line-through;
     color: var(--text-muted);
 }
+
