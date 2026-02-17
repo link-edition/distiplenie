@@ -191,22 +191,32 @@
             <!-- Sidebar Footer -->
             <div class="sidebar-footer">
                 <div class="user-info">
-                    <div class="user-avatar">U</div>
+                    <div class="user-avatar" id="userAvatar">U</div>
                     <div class="user-details">
-                        <span class="user-name">Foydalanuvchi</span>
+                        <span class="user-name" id="userName">Foydalanuvchi</span>
                         <span class="user-plan">
                             <span class="streak-badge">🔥 <span id="streakCount">0</span> kun</span>
                         </span>
                     </div>
                 </div>
-                <button class="settings-btn" id="settingsBtn" title="Sozlamalar">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="3" />
-                        <path
-                            d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
-                    </svg>
-                </button>
-            </div>
+                <div style="display: flex; gap: 4px;">
+                    <button class="settings-btn" id="logoutBtn" title="Chiqish" onclick="logoutUser()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4" />
+                            <polyline points="16 17 21 12 16 7" />
+                            <line x1="21" y1="12" x2="9" y2="12" />
+                        </svg>
+                    </button>
+                    <button class="settings-btn" id="settingsBtn" title="Sozlamalar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+                        </svg>
+                    </button>
+                </div>
         </aside>
 
         <!-- Main Content -->
@@ -1308,8 +1318,56 @@
         <button class="toast-undo" id="toastUndo">Bekor qilish</button>
     </div>
 
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script>
+        // Firebase Config
+        const firebaseConfig = {
+            apiKey: "AIzaSyAvTDFI6CkoCX5z4ud3RmKAJuRJH8GykoA",
+            authDomain: "discipline-app-faf38.firebaseapp.com",
+            projectId: "discipline-app-faf38",
+            storageBucket: "discipline-app-faf38.firebasestorage.app",
+            messagingSenderId: "195529532966",
+            appId: "1:195529532966:web:37d4b730c092e4c81368e7"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        // Auth Guard - redirect to login if not authenticated
+        auth.onAuthStateChanged((user) => {
+            if (!user) {
+                window.location.href = 'login.html';
+                return;
+            }
+            // Update user info in sidebar
+            const userNameEl = document.getElementById('userName');
+            const userAvatarEl = document.getElementById('userAvatar');
+            if (userNameEl && user.displayName) {
+                userNameEl.textContent = user.displayName;
+            } else if (userNameEl && user.email) {
+                userNameEl.textContent = user.email.split('@')[0];
+            }
+            if (userAvatarEl) {
+                const name = user.displayName || user.email || 'U';
+                userAvatarEl.textContent = name.charAt(0).toUpperCase();
+                if (user.photoURL) {
+                    userAvatarEl.style.backgroundImage = `url(${user.photoURL})`;
+                    userAvatarEl.style.backgroundSize = 'cover';
+                    userAvatarEl.style.backgroundPosition = 'center';
+                    userAvatarEl.textContent = '';
+                }
+            }
+        });
+
+        // Logout function
+        function logoutUser() {
+            auth.signOut().then(() => {
+                window.location.href = 'index.html';
+            });
+        }
+    </script>
     <script src="dashboard.js"></script>
 </body>
 
 </html>
-
